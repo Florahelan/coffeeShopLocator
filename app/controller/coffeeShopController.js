@@ -1,7 +1,8 @@
 module.exports.coffeeShopController = function () {
 
     var fileReader = require('fs');
-    var parse = require('csv-parse');
+    const parse = require('csv-reader');
+    const Decoder = require('autodetect-decoder-stream');
 
     //User Defined
     var CoffeeShop = require('../model/CoffeeShop').CoffeeShop;
@@ -9,12 +10,16 @@ module.exports.coffeeShopController = function () {
 
     var coffeeShopsMap = {};
 
+
     var initFromFile = function (inputFile, callback) {
-        fileReader
-            .createReadStream(inputFile)
-            .pipe(parse({delimiter: ','}))
-            .on('data', function (data) {
-                var coffeeShop = new CoffeeShop(data[0], data[1], data[2], data[3], data[4]);
+
+        var inputStream = fileReader.createReadStream(inputFile)
+            .pipe(new Decoder({ defaultEncoding: '1255' }));
+
+        inputStream
+            .pipe(parse({delimiter: ',', trim: true}))
+            .on('data', function (row) {
+                var coffeeShop = new CoffeeShop(row[0], row[1], row[2], row[3], row[4]);
                 coffeeShopsMap[coffeeShop.id] = coffeeShop;
             })
             .on('error', function (err) {
