@@ -14,6 +14,9 @@ pids
 # Dependency directories
 node_modules/
 
+# Workspace directory
+.idea/
+
 # Optional npm cache directory
 .npm
 

@@ -8,7 +8,7 @@
     "url": "https://github.com/Florahelan/coffeeShopLocator.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "coffeeshop",
@@ -25,5 +25,9 @@
     "csv-reader": "^1.0.3",
     "express": "^4.16.3",
     "geodist": "^0.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
   }
 }
