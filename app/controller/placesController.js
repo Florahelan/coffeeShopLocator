@@ -16,7 +16,7 @@ module.exports.places = function () {
                 //console.log("Retrieved from Google Lat: " + lat + " Long : " + lng);
                 var minDistance = 100.00;
                 var distance = 100.00;
-                var selectedShop;
+                var selectedShop=null;
 
                 var map = data.map;
                 for (var item in map) {
@@ -26,12 +26,17 @@ module.exports.places = function () {
                             {lat: lat, lon: lng},
                             {lat: shop.latitude, lon: shop.longitude},
                             {exact: true});
+
                         if (distance <= minDistance) {
                             console.log("Distance : " + distance);
                             minDistance = distance;
                             selectedShop = shop;
                         }
                     }
+                }
+                if(selectedShop==null){
+                    callback('There is no coffee shop within 100 miles', null);
+                    return;
                 }
                 callback(null, selectedShop);
             } else {

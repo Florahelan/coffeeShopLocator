@@ -2,14 +2,16 @@ module.exports.coffeeShopController = function () {
 
     var fileReader = require('fs');
     var parse = require('csv-parse');
-    var async = require('async');
+
+    //User Defined
     var CoffeeShop = require('../model/CoffeeShop').CoffeeShop;
-    var places = require('./placesController').places;
+    var placesController = require('./placesController').places;
 
     var coffeeShopsMap = {};
 
     var initFromFile = function (inputFile, callback) {
-        fileReader.createReadStream(inputFile)
+        fileReader
+            .createReadStream(inputFile)
             .pipe(parse({delimiter: ','}))
             .on('data', function (data) {
                 var coffeeShop = new CoffeeShop(data[0], data[1], data[2], data[3], data[4]);
@@ -75,7 +77,7 @@ module.exports.coffeeShopController = function () {
     };
 
     var getNearest = function (address, serverCallBack) {
-        places.getNearest({
+        placesController.getNearest({
             address: address,
             map: coffeeShopsMap
         }, function (err, data) {
