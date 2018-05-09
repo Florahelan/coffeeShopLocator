@@ -40,13 +40,14 @@ module.exports.places = function () {
                         }
                     }
                 }
-                if(selectedShop==null){
-                    callback('There is no coffee shop within 100 miles', null);
+                if(!selectedShop){
+                    callback('There is no coffee shop within 100 miles');
                     return;
                 }
                 callback(null, selectedShop);
             } else {
                 console.log("error " + err);
+                callback(err);
             }
         });
     };

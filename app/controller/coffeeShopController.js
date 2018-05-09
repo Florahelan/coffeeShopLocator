@@ -111,7 +111,7 @@ module.exports.coffeeShopController = function () {
             map: coffeeShopsMap
         }, function (err, data) {
             if (err) {
-                console.log("Error " + err);
+                serverCallBack(err);
                 return;
             }
             console.log(data);

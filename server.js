@@ -134,7 +134,11 @@ app
     .post('/find-nearest', function (req, res) {
         var address = decodeURI(req.body.address);
         controller.findNearest(address, function (err, data) {
-            responseUtils.success(res, data);
+            if (err) {
+                responseUtils.failure(res, 400, err);
+            } else {
+                responseUtils.success(res, data);
+            }
         });
     });
 

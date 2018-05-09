@@ -1,0 +1,330 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Coffee-Locator-Apis",
+		"_postman_id": "dbd88435-5c74-4716-dec1-b0ec3f7e9c82",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "read",
+			"request": {
+				"url": "localhost:4500/read",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "9859b13a-cdb4-4430-8f12-9aaf8ec52b83",
+					"name": "readall",
+					"originalRequest": {
+						"url": "localhost:4500/read",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "6197",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 09 May 2018 02:08:36 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"1835-Iwlx5ITjWQfqTbrIBVELSAqJ2qM\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 70,
+					"body": "{\"success\":true,\"code\":200,\"data\":[{\"id\":\"1\",\"name\":\"Equator Coffees & Teas\",\"address\":\"986 Market St\",\"latitude\":\"37.782394430549445\",\"longitude\":\"-122.40997343121123\"},{\"id\":\"2\",\"name\":\"Snowbird Coffee\",\"address\":\"1352A 9th Ave\",\"latitude\":\"37.76309350825185\",\"longitude\":\"-122.46623159512482\"},{\"id\":\"3\",\"name\":\"Wrecking Ball Coffee Roasters\",\"address\":\"2271 Union St\",\"latitude\":\"37.796814043694475\",\"longitude\":\"-122.43670463562013\"},{\"id\":\"4\",\"name\":\"Andytown\",\"address\":\"3655 Lawton St\",\"latitude\":\"37.75663526453123\",\"longitude\":\"-122.50225782394409\"},{\"id\":\"5\",\"name\":\"Blue Bottle Coffee\",\"address\":\"315 Linden St\",\"latitude\":\"37.776407\",\"longitude\":\"-122.42325067520142\"},{\"id\":\"6\",\"name\":\"Ritual Coffee Roasters\",\"address\":\"1300 Haight St\",\"latitude\":\"37.77053793217966\",\"longitude\":\"-122.44385138624112\"},{\"id\":\"7\",\"name\":\"La Capra Coffee\",\"address\":\"50 Fremont St\",\"latitude\":\"37.79070809753265\",\"longitude\":\"-122.39753881875188\"},{\"id\":\"8\",\"name\":\"Ritual Coffee Roasters\",\"address\":\"1026 Valencia St\",\"latitude\":\"37.756501\",\"longitude\":\"-122.421146\"},{\"id\":\"9\",\"name\":\"Saint Frank\",\"address\":\"2340 Polk St\",\"latitude\":\"37.79844606426525\",\"longitude\":\"-122.4222130074603\"},{\"id\":\"10\",\"name\":\"Blue Bottle Coffee\",\"address\":\"1 Ferry Building Ste 7\",\"latitude\":\"37.79590475625579\",\"longitude\":\"-122.39393759555746\"},{\"id\":\"11\",\"name\":\"Sightglass Coffee\",\"address\":\"270 7th St\",\"latitude\":\"37.77702490373948\",\"longitude\":\"-122.40852980833175\"},{\"id\":\"12\",\"name\":\"Flywheel Coffee\",\"address\":\"672 Stanyan St\",\"latitude\":\"37.76957397933175\",\"longitude\":\"-122.45336134825135\"},{\"id\":\"13\",\"name\":\"Blue Bottle Coffee\",\"address\":\"66 Mint Plaza\",\"latitude\":\"37.78246395814844\",\"longitude\":\"-122.40782260894775\"},{\"id\":\"14\",\"name\":\"Wildcraft Espresso Bar\",\"address\":\"2299 Market St\",\"latitude\":\"37.7641264665863\",\"longitude\":\"-122.4330686990795\"},{\"id\":\"15\",\"name\":\"RÃ©veille Coffee Co.\",\"address\":\"200 Columbus Ave\",\"latitude\":\"37.79721249965347\",\"longitude\":\"-122.40549981594086\"},{\"id\":\"16\",\"name\":\"Red Door Coffee\",\"address\":\"111 Minna St\",\"latitude\":\"37.78746242830388\",\"longitude\":\"-122.39933341741562\"},{\"id\":\"17\",\"name\":\"RÃ©veille Coffee Co.\",\"address\":\"4076 18th St\",\"latitude\":\"37.76098725908006\",\"longitude\":\"-122.43446774623341\"},{\"id\":\"18\",\"name\":\"Caffe Trieste\",\"address\":\"601 Vallejo St\",\"latitude\":\"37.798682710638104\",\"longitude\":\"-122.40722444643663\"},{\"id\":\"19\",\"name\":\"Blue Bottle Coffee\",\"address\":\"115 Sansome St\",\"latitude\":\"37.79132021905332\",\"longitude\":\"-122.40098297595978\"},{\"id\":\"20\",\"name\":\"Mazarine Coffee\",\"address\":\"720 Market St\",\"latitude\":\"37.78737620645949\",\"longitude\":\"-122.40381715427705\"},{\"id\":\"21\",\"name\":\"Cafe St. Jorge\",\"address\":\"3438 Mission St\",\"latitude\":\"37.74168720173771\",\"longitude\":\"-122.4225780158454\"},{\"id\":\"22\",\"name\":\"Jane\",\"address\":\"2123 Fillmore St\",\"latitude\":\"37.78930232286027\",\"longitude\":\"-122.43397951126099\"},{\"id\":\"23\",\"name\":\"Stable Cafe\",\"address\":\"2128 Folsom St\",\"latitude\":\"37.76317491980427\",\"longitude\":\"-122.41525769233704\"},{\"id\":\"24\",\"name\":\"Ritual Coffee Roasters\",\"address\":\"432B Octavia St\",\"latitude\":\"37.77649268335422\",\"longitude\":\"-122.4242315985391\"},{\"id\":\"25\",\"name\":\"Sightglass Coffee\",\"address\":\"3014 20th St\",\"latitude\":\"37.759122\",\"longitude\":\"-122.411312\"},{\"id\":\"26\",\"name\":\"Blue Bottle Coffee\",\"address\":\"1355 Market St Ste 190\",\"latitude\":\"37.77625554409089\",\"longitude\":\"-122.41690918183825\"},{\"id\":\"27\",\"name\":\"Bob's Donut & Pastry Shop\",\"address\":\"1621 Polk St\",\"latitude\":\"37.791902136022294\",\"longitude\":\"-122.42092993761123\"},{\"id\":\"28\",\"name\":\"Four Barrel Coffee\",\"address\":\"375 Valencia St\",\"latitude\":\"37.76702438676065\",\"longitude\":\"-122.42195860692624\"},{\"id\":\"29\",\"name\":\"Philz Coffee\",\"address\":\"399 Golden Gate Ave\",\"latitude\":\"37.78137434004842\",\"longitude\":\"-122.41704404354097\"},{\"id\":\"30\",\"name\":\"Dynamo Donut & Coffee\",\"address\":\"2760 24th St\",\"latitude\":\"37.752940666211465\",\"longitude\":\"-122.40765035019247\"},{\"id\":\"31\",\"name\":\"Jane\",\"address\":\"925 Larkin St\",\"latitude\":\"37.786475\",\"longitude\":\"-122.418342\"},{\"id\":\"32\",\"name\":\"Philz Coffee\",\"address\":\"300 Folsom St\",\"latitude\":\"37.788679838776616\",\"longitude\":\"-122.39288652408356\"},{\"id\":\"33\",\"name\":\"Blue Bottle Coffee\",\"address\":\"2 South Park\",\"latitude\":\"37.782484\",\"longitude\":\"-122.393163\"},{\"id\":\"34\",\"name\":\"Philz Coffee\",\"address\":\"549 Castro St\",\"latitude\":\"37.760203782770596\",\"longitude\":\"-122.43491565857126\"},{\"id\":\"36\",\"name\":\"Wicked Grounds\",\"address\":\"289 8th St\",\"latitude\":\"37.775217908033895\",\"longitude\":\"-122.4102258682251\"},{\"id\":\"37\",\"name\":\"Hollow\",\"address\":\"1435 Irving St\",\"latitude\":\"37.76374693039945\",\"longitude\":\"-122.47342895489572\"},{\"id\":\"38\",\"name\":\"Papa November\",\"address\":\"201 Kansas St\",\"latitude\":\"37.767220564891566\",\"longitude\":\"-122.40361690521239\"},{\"id\":\"39\",\"name\":\"Coffee Cultures\",\"address\":\"1301 Mission St\",\"latitude\":\"37.77612762238859\",\"longitude\":\"-122.41465262422996\"},{\"id\":\"41\",\"name\":\"Blue Bottle Coffee Kiosk\",\"address\":\"Ferry Building\",\"latitude\":\"37.79482223788696\",\"longitude\":\"-122.39397631904288\"},{\"id\":\"43\",\"name\":\"Red Blossom Tea Company\",\"address\":\"831 Grant Ave\",\"latitude\":\"37.79473059269872\",\"longitude\":\"-122.40654319524765\"},{\"id\":\"44\",\"name\":\"Cento\",\"address\":\"372 Ritch St\",\"latitude\":\"37.77878809371789\",\"longitude\":\"-122.39387121240644\"},{\"id\":\"45\",\"name\":\"Pinhole Coffee\",\"address\":\"231 Cortland Ave\",\"latitude\":\"37.73955564148793\",\"longitude\":\"-122.41907167072054\"},{\"id\":\"46\",\"name\":\"Four Barrel Coffee\",\"address\":\"2 Burrows St.\",\"latitude\":\"37.72890952922229\",\"longitude\":\"-122.40385293960571\"},{\"id\":\"49\",\"name\":\"RÃ©veille Coffee Co.\",\"address\":\"610 Long Bridge St\",\"latitude\":\"37.773347990695086\",\"longitude\":\"-122.39145373080255\"},{\"id\":\"52\",\"name\":\"Philz Coffee\",\"address\":\"1258 Minnesota St\",\"latitude\":\"37.75439174418145\",\"longitude\":\"-122.38995453240166\"},{\"id\":\"53\",\"name\":\"The Richfield\",\"address\":\"195 5th Ave\",\"latitude\":\"37.784967\",\"longitude\":\"-122.46362\"},{\"id\":\"55\",\"name\":\"Trouble Coffee\",\"address\":\"4033 Judah St\",\"latitude\":\"37.76033350637597\",\"longitude\":\"-122.50536918640137\"},{\"id\":\"56\",\"name\":\"Chapel Hill Coffee Co.\",\"address\":\"670 Commercial St\",\"latitude\":\"37.794096040757196\",\"longitude\":\"-122.40423200906335\"}]}"
+				}
+			]
+		},
+		{
+			"name": "readSingle",
+			"request": {
+				"url": "localhost:4500/read/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "aff57464-5614-47ca-834f-5fa58369ddab",
+					"name": "readSingle",
+					"originalRequest": {
+						"url": "localhost:4500/read/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "161",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 09 May 2018 02:11:20 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"a1-kxuPWoFZk4WQlHHT0Rxf/RAlS6Q\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 31,
+					"body": "{\"success\":true,\"code\":200,\"data\":{\"id\":\"2\",\"name\":\"Snowbird Coffee\",\"address\":\"1352A 9th Ave\",\"latitude\":\"37.76309350825185\",\"longitude\":\"-122.46623159512482\"}}"
+				}
+			]
+		},
+		{
+			"name": "create",
+			"request": {
+				"url": "localhost:4500/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "216",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Philz",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "222 Front St.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "37.782394430549445",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "-122.40997343121123",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "localhost:4500/update/18",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "18",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Flora's Coffee Shop",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "My Home",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "12345",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "65432",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "localhost:4500/delete/216",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "find-nearest",
+			"request": {
+				"url": "localhost:4500/find-nearest",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "address",
+							"value": "535 Mission St., San Francisco, CA",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
