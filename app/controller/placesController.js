@@ -1,8 +1,14 @@
 module.exports.places = function () {
     var geodist = require('geodist');
+    //Place API and Geocoding API is enabled based on the Apikey in cloud.google.com
     var googleMapsClient = require('@google/maps').createClient({
-        key: "AIzaSyAgLFO78XqTXno8xMxoxMdcJflrZN8Bmwg"
+        key: "AIzaSyCOhB9SH-7c3lpTninJuypWweKTlGSpIWQ"
     });
+
+
+    //This function uses geodist to called the distance based on the latitude and longitude given.
+    //If the coffee shop is with 100 miles to the given distance then it displays the name
+    //Else it displays that Coffe shop not found.
 
     var getNearest = function (data, callback) {
         googleMapsClient.geocode({

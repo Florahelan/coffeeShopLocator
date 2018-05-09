@@ -8,7 +8,8 @@
     "url": "https://github.com/Florahelan/coffeeShopLocator.git"
   },
   "scripts": {
-    "test": "mocha"
+    "start": "node server.js",
+    "test": "mocha --timeout 10000"
   },
   "keywords": [
     "coffeeshop",
@@ -21,10 +22,13 @@
     "async": "^2.6.0",
     "autodetect-decoder-stream": "^1.0.0",
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "csv-parse": "^2.4.0",
     "csv-reader": "^1.0.3",
     "express": "^4.16.3",
-    "geodist": "^0.2.1"
+    "geodist": "^0.2.1",
+    "npm": "^6.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",

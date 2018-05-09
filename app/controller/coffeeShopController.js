@@ -2,6 +2,7 @@ module.exports.coffeeShopController = function () {
 
     var fileReader = require('fs');
     const parse = require('csv-reader');
+    var csv_parse = require('csv-parse');
     const Decoder = require('autodetect-decoder-stream');
 
     //User Defined
@@ -10,27 +11,45 @@ module.exports.coffeeShopController = function () {
 
     var coffeeShopsMap = {};
 
+//data is read from the given inputfile and and stored in hashMap(coffeeShopsMap)
 
     var initFromFile = function (inputFile, callback) {
 
         var inputStream = fileReader.createReadStream(inputFile)
-            .pipe(new Decoder({ defaultEncoding: '1255' }));
+            .pipe(new Decoder({defaultEncoding: '1255'}));
 
-        inputStream
-            .pipe(parse({delimiter: ',', trim: true}))
-            .on('data', function (row) {
-                var coffeeShop = new CoffeeShop(row[0], row[1], row[2], row[3], row[4]);
-                coffeeShopsMap[coffeeShop.id] = coffeeShop;
-            })
-            .on('error', function (err) {
-                callback(err);
-            });
+        try{
+            inputStream
+                .pipe(csv_parse({delimiter: ','}))
+                .on('data', function (row) {
+                    var coffeeShop = new CoffeeShop(row[0], row[1], row[2], row[3], row[4]);
+                    coffeeShopsMap[coffeeShop.id] = coffeeShop;
+                })
+                .on('error', function (err) {
+                    callback(err);
+                });
+        }
+        catch(e) {
+
+            //Using an alternative parser .. It is failing sometimes
+            inputStream
+                .pipe(parse({delimiter: ',', trim: true}))
+                .on('data', function (row) {
+                    var coffeeShop = new CoffeeShop(row[0], row[1], row[2], row[3], row[4]);
+                    coffeeShopsMap[coffeeShop.id] = coffeeShop;
+                })
+                .on('error', function (err) {
+                    callback(err);
+                });
+        }
     };
+
 
     var retrieveAllData = function (callback) {
         callback(null, coffeeShopsMap);
     };
 
+    //If the id does exist then it retrieves the details
     var retrieveSingleShop = function (id, callback) {
         var coffeeShop = coffeeShopsMap[id];
         if (coffeeShop) {
@@ -40,6 +59,7 @@ module.exports.coffeeShopController = function () {
         }
     };
 
+    //If id doesnot exist then it adds Hashmap
     var addShop = function (data, callback) {
         var coffeeShop = coffeeShopsMap[data.id];
         if (coffeeShop) {
@@ -55,6 +75,7 @@ module.exports.coffeeShopController = function () {
         }
     };
 
+    //If id is found then it updated the details with the existing list
 
     var updateShop = function (data, callback) {
         var coffeeShop = coffeeShopsMap[data.id];
@@ -70,7 +91,8 @@ module.exports.coffeeShopController = function () {
         }
     };
 
-
+    //if id is found, the entire row based on the given ID gets deleted.
+    //If id is not found it returns error message
     var deleteShop = function (id, callback) {
         var coffeeShop = coffeeShopsMap[id];
         if (coffeeShop) {
@@ -80,6 +102,8 @@ module.exports.coffeeShopController = function () {
             callback("Coffee Shop for " + id + " is not found");
         }
     };
+
+    //It calls placesController.js, It takes address as input and returns nearest coffee shop name
 
     var getNearest = function (address, serverCallBack) {
         placesController.getNearest({
@@ -105,4 +129,3 @@ module.exports.coffeeShopController = function () {
         findNearest: getNearest
     };
 }();
-
