@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64f0e458-542a-4711-8b72-a300d5cfedab" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/postman/screenshots/create.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postman/screenshots/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postman/screenshots/findNearst.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postman/screenshots/read.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postman/screenshots/readSingle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postman/screenshots/update.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,7 +31,7 @@
             <entry file="file://$PROJECT_DIR$/test/coffeeShopControllerTest.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="256">
-                  <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+                  <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -113,7 +107,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="722" />
@@ -221,7 +215,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525746861099</updated>
       <workItem from="1525746862735" duration="1250000" />
-      <workItem from="1525748211921" duration="56606000" />
+      <workItem from="1525748211921" duration="57093000" />
     </task>
     <task id="LOCAL-00001" summary="1. Added Test cases for server.js and Coffee Controller Test &#10;&#10;2. Add code documentation for all the files . &#10;&#10;3. Csv parser not reliably working so added  extra parser in catch block.">
       <created>1525836031036</created>
@@ -230,11 +224,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525836031036</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Screenshots">
+      <created>1525837113390</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525837113390</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57856000" />
+    <option name="totallyTimeSpent" value="58343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1280" height="722" extended-state="0" />
@@ -269,7 +270,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Adding git ignore&#10;- Removed the node_modules &#10;- Code refactoring" />
     <MESSAGE value="1. Added Test cases for server.js and Coffee Controller Test &#10;&#10;2. Add code documentation for all the files . &#10;&#10;3. Csv parser not reliably working so added  extra parser in catch block." />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Added Test cases for server.js and Coffee Controller Test &#10;&#10;2. Add code documentation for all the files . &#10;&#10;3. Csv parser not reliably working so added  extra parser in catch block." />
+    <MESSAGE value="Added Screenshots" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Screenshots" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,7 +421,7 @@
     <entry file="file://$PROJECT_DIR$/test/coffeeShopControllerTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
         </state>
       </provider>
     </entry>
