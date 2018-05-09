@@ -53,11 +53,28 @@ By default the host port is set to 4500 . To change the port type
 
 ### ScreenShots
 
+#### Create Request : 
+![Create Request](https://github.com/Florahelan/coffeeShopLocator/blob/master/postman/screenshots/create.png)
+
+#### Retrieve All Shops : 
+![Retrieve All Shops](https://github.com/Florahelan/coffeeShopLocator/blob/master/postman/screenshots/read.png)
+
+#### Retrieve Single Shops : 
+![Retrieve Single Shop](https://github.com/Florahelan/coffeeShopLocator/blob/master/postman/screenshots/readSingle.png)
+
+#### Delete Single Shop : 
+![Delete Request](https://github.com/Florahelan/coffeeShopLocator/blob/master/postman/screenshots/delete.png)
+
+#### Update Single Shop : 
+![Update Request](https://github.com/Florahelan/coffeeShopLocator/blob/master/postman/screenshots/update.png)
+
+#### Find Nearest Coffee Shop : 
+![Find Nearest Request](https://github.com/Florahelan/coffeeShopLocator/blob/master/postman/screenshots/findNearst.png)
 
 ## Testing Via Terminal 
 1. Once the node server is running, Open another instance in the terminal and you can test the functionality using simple curl commands 
 
-Example : 
+#### Example : 
    1. Read all Coffee Shops :  :   `curl localhost:PORT/read`
 
    2. Read Single Coffee Shop by Id  :   `curl localhost:PORT/read/<id>`
